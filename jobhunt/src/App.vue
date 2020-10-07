@@ -18,9 +18,7 @@
         {{ company.area }}
         {{ company.progress }}
         {{ company.url }}
-        <div>
-          <input type="button" v-on:click="deleteCompanies(company.name)" value="削除" />
-        </div>
+        <input type="button" v-on:click="deleteCompanies(company.d)" value="削除" />
       </li>
     </ul>
   </div>
@@ -39,7 +37,8 @@ export default {
       name: '',
       area: '',
       progress: '',
-      url: ''
+      url: '',
+      d: ''
     }
   },
   methods: {
@@ -49,7 +48,8 @@ export default {
           name: this.name,
           area: this.area,
           progress: this.progress,
-          url: this.url
+          url: this.url,
+          d: new Date()
         },
       })
       this.name = '';
@@ -57,8 +57,8 @@ export default {
       this.progress = '';
       this.url = '';
     },
-    deleteCompanies(name) {
-      this.$store.commit("deleteCompanies", name)
+    deleteCompanies(d) {
+      this.$store.commit("deleteCompanies", d)
     }
   }
 }
@@ -72,5 +72,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+ul li {
+  list-style: none;
 }
 </style>
