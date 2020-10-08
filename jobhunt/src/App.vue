@@ -2,7 +2,7 @@
   <div id="app">
     <h1>就職活動状況リスト</h1>
     <form v-on:submit.prevent="onclick">
-      <label for="name">社名：</label>
+      <label for="name">会社名：</label>
       <input type="text" v-model="name" placeholder="社名を入力して下さい" />
       <label for="area">所在地(勤務地)：</label>
       <input type="text" v-model="area" placeholder="所在地を入力して下さい" />
@@ -84,6 +84,9 @@ export default {
 }
 
 table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   width: 1000px;
   border: 1px solid #2c3e50;
   border-collapse: collapse;
