@@ -87,9 +87,10 @@ table {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 1000px;
+  width: 1100px;
   border: 1px solid #2c3e50;
   border-collapse: collapse;
+  font-size: 13pt;
 }
 
 table th {
