@@ -17,8 +17,8 @@ export default new Vuex.Store({
     addCompanies(state, payload) {
       state.companies.push(payload.company);
     },
-    deleteCompanies(state, d) {
-      let indexed = state.companies.findIndex(company => company.d === d);
+    deleteCompanies(state, name) {
+      let indexed = state.companies.findIndex(company => company.name === name);
       state.companies.splice(indexed, 1);
     }
   },
