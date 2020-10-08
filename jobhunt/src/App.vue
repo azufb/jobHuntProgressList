@@ -12,15 +12,21 @@
       <input type="url" v-model="url" placeholder="URLを入力して下さい" />
       <input type="submit" value="登録" />
     </form>
-    <ul v-for='(company, index) in companies' :key="index">
-      <li>
-        {{ company.name }}
-        {{ company.area }}
-        {{ company.progress }}
-        {{ company.url }}
-        <input type="button" v-on:click="deleteCompanies(company.name)" value="削除" />
-      </li>
-    </ul>
+    <table>
+      <tr>
+        <th>会社名</th>
+        <th>所在地</th>
+        <th>選考状況</th>
+        <th>URL</th>
+      </tr>
+      <tr v-for='(company, index) in companies' :key="index">
+        <td>{{ company.name }}</td>
+        <td>{{ company.area }}</td>
+        <td>{{ company.progress }}</td>
+        <td>{{ company.url }}</td>
+        <td><input type="button" v-on:click="deleteCompanies(company.name)" value="削除" /></td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -72,7 +78,4 @@ export default {
   margin-top: 60px;
 }
 
-ul li {
-  list-style: none;
-}
 </style>
