@@ -18,12 +18,17 @@
         <th>所在地</th>
         <th>選考状況</th>
         <th>URL</th>
+        <th></th>
       </tr>
       <tr v-for='(company, index) in companies' :key="index">
         <td>{{ company.name }}</td>
         <td>{{ company.area }}</td>
         <td>{{ company.progress }}</td>
-        <td>{{ company.url }}</td>
+        <td>
+          <a :href="company.url" target="_blank" rel="noopener noreferrer">
+            {{ company.url }}
+          </a>
+        </td>
         <td><input type="button" v-on:click="deleteCompanies(company.name)" value="削除" /></td>
       </tr>
     </table>
@@ -76,6 +81,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+table {
+  width: 1000px;
+  border: 1px solid #2c3e50;
+  border-collapse: collapse;
+}
+
+table th {
+  border-bottom: 1px solid #2c3e50;
 }
 
 </style>
