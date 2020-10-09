@@ -31,6 +31,7 @@ export default {
                 .createUserWithEmailAndPassword(this.email, this.password)
                 .then(() => {
                     alert('登録');
+                    this.$router.push('/progress');
                 })
                 .catch(error => {
                     alert('Error', error.message);

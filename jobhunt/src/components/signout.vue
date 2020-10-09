@@ -6,9 +6,23 @@
 </template>
 
 <script>
-//import firebase from '../firebase.js'
+import firebase from '../firebase.js'
 
 export default {
-    name: 'signout'
+    name: 'signout',
+    methods: {
+        signout() {
+            firebase
+                .auth()
+                .signOut()
+                .then(() => {
+                    alert('サインアウトしました。');
+                    this.$router.push('/');
+                })
+                .catch(error => {
+                    alert(error);
+                });
+        }
+    }
 };
 </script>
