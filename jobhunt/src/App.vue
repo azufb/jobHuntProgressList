@@ -1,16 +1,24 @@
 <template>
-  <div id="app">
-    <Progress></Progress>
+  <div id='app'>
+    <!--<Progress></Progress>-->
+    <div id='nav'>
+      <router-link to='/'>Home</router-link>|
+      <router-link to='/signup'>登録</router-link> |
+      <router-link to='/signin'>サインイン</router-link> |
+      <router-link to='/signout'>サインアウト</router-link> |
+      <router-link to='/progress'>Progress</router-link> |
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Progress from './components/progressManage.vue'
+//import Progress from './components/progressManage.vue'
 export default {
   name: 'App',
-  components: {
+  /*components: {
     Progress
-  }
+  }*/
   
 }
 </script>

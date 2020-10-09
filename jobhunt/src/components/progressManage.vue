@@ -1,5 +1,6 @@
 <template>
   <div id="progress">
+    <h1>サインアウト</h1>
     <h1>就職活動状況リスト</h1>
     <form v-on:submit.prevent="onclick">
       <label for="name">会社名：</label>
