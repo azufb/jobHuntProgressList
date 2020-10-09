@@ -1,7 +1,9 @@
 <template>
     <div>
-        <h1>サインアウト</h1>
-        <button @click='signout'>サインアウト</button>
+        <button @click='signout' class='signOutButton'>
+            Sign Out
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
     </div>
 </template>
 
@@ -16,7 +18,6 @@ export default {
                 .auth()
                 .signOut()
                 .then(() => {
-                    alert('サインアウトしました。');
                     this.$router.push('/');
                 })
                 .catch(error => {
@@ -26,3 +27,11 @@ export default {
     }
 };
 </script>
+
+<style>
+.signOutButton {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+</style>

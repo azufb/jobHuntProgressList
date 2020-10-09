@@ -1,15 +1,24 @@
 <template>
-    <div>
-        <h1>登録</h1>
+    <div class='signup'>
+        <h1 class='title'>Register Now!</h1>
+        <p class='description'>
+            メールアドレスとパスワードで、<br>
+            ユーザー登録をしましょう。
+        </p>
         <div>
-            <label>E-mail</label>
-            <input type='text' placeholder='E-mail' v-model='email' />
+            <label class='formLabel'>E-mail：</label>
+            <input type='text' placeholder='E-mail' v-model='email' required />
         </div>
-        <div>
-            <label>Password</label>
-            <input type='text' placeholder='Password' v-model='password' />
+        <div class='passwordForm'>
+            <label class='formLabel'>Password：</label>
+            <input type='password' placeholder='Password' v-model='password' required />
         </div>
-        <button @click='createUserAccount'>登録</button>
+        <router-link to='/'>
+            <button class='toHome'>
+                Cancel
+            </button>
+        </router-link>
+        <button @click='createUserAccount' class='registerButton'>Register</button>
     </div>
 </template>
 
@@ -30,7 +39,6 @@ export default {
                 .auth()
                 .createUserWithEmailAndPassword(this.email, this.password)
                 .then(() => {
-                    alert('登録');
                     this.$router.push('/progress');
                 })
                 .catch(error => {
@@ -41,3 +49,40 @@ export default {
     }
 };
 </script>
+
+<style>
+.signup {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.title {
+    margin-bottom: 0px;
+}
+
+.description {
+    margin-top: 0px;
+}
+
+.registerButton {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+@media(max-width: 767px) {
+    .signup {
+        width: 270px;
+    }
+}
+
+@media(max-width: 653px) {
+    .signup {
+        width: 260px;
+    }
+}
+</style>
