@@ -1,0 +1,132 @@
+$marginTop: 30px;
+$marginLeft: 10px;
+$marginRight: 10px;
+$fontSize: 20px;
+$mainColor: #2c3e50;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    footer {
+        margin-top: auto;
+    }
+}
+
+#app {
+    margin-top: 0px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $mainColor;
+    h1 {
+        margin-top: 10px;
+        font-size: 50px;
+    }
+    h2 {
+        margin: {
+            bottom: 0px;
+        }
+        text-align: left;
+    } 
+    .signin {
+        margin: {
+            top: 50px;
+            left: auto;
+            right: auto;
+        }
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+    }
+    .formLabel {
+        font-size: $fontSize;
+    }
+    
+    .passwordForm {
+        margin: {
+            top: 10px;
+        }
+    }
+    .signInButton {
+        margin: {
+            top: $marginTop;
+            left: $marginLeft;
+        }
+        font-size: $fontSize;
+    }
+    .toHome {
+        margin: {
+            top: $marginTop;
+        }
+        font-size: $fontSize;
+    }
+    .signup {
+        margin: {
+            top: 50px;
+            left: auto;
+            right: auto;
+        }
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+    }  
+    .title {
+        margin: {
+            bottom: 0px;
+        }
+    }   
+    .description {
+        margin: {
+            top: 0px;
+        }
+    }
+    .registerButton {
+        margin: {
+            top: $marginTop;
+            left: $marginLeft;
+        }
+        font-size: $fontSize;
+    }  
+    #progress {
+        label {
+            font-size: $fontSize;
+        }
+        input {
+            font-size: $fontSize;
+        }
+        button {
+            font-size: $fontSize;
+            color: $mainColor;
+        }
+    }  
+    table {
+        margin: {
+            top: 20px;
+            left: auto;
+            right: auto;
+        }
+        width: 1300px;
+        border: 1px solid $mainColor;
+        border-collapse: collapse;
+        font-size: 13pt;
+    }
+    table th {
+        border-bottom: 1px solid $mainColor;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+    }
+    .signOutButton {
+        font-size: $fontSize;
+    }
+    .signoutBtn {
+        margin: {
+            top: $marginTop;
+            left: $marginLeft;
+        }
+    }
+
+}

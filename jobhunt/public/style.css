@@ -1,10 +1,80 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+  body footer {
+    margin-top: auto; }
 
-footer {
-    margin-top: auto;
-    color: #2c3e50;
-}
+#app {
+  margin-top: 0px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50; }
+  #app h1 {
+    margin-top: 10px;
+    font-size: 50px; }
+  #app h2 {
+    margin-bottom: 0px;
+    text-align: left; }
+  #app .signin {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black; }
+  #app .formLabel {
+    font-size: 20px; }
+  #app .passwordForm {
+    margin-top: 10px; }
+  #app .signInButton {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 20px; }
+  #app .toHome {
+    margin-top: 30px;
+    font-size: 20px; }
+  #app .signup {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black; }
+  #app .title {
+    margin-bottom: 0px; }
+  #app .description {
+    margin-top: 0px; }
+  #app .registerButton {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 20px; }
+  #app #progress label {
+    font-size: 20px; }
+  #app #progress input {
+    font-size: 20px; }
+  #app #progress button {
+    font-size: 20px;
+    color: #2c3e50; }
+  #app table {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    border: 1px solid #2c3e50;
+    border-collapse: collapse;
+    font-size: 13pt; }
+  #app table th {
+    border-bottom: 1px solid #2c3e50; }
+  #app .btn {
+    display: flex;
+    justify-content: center; }
+  #app .signOutButton {
+    font-size: 20px; }
+  #app .signoutBtn {
+    margin-top: 30px;
+    margin-left: 10px; }
+
+/*# sourceMappingURL=style.css.map */

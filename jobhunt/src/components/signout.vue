@@ -27,11 +27,3 @@ export default {
     }
 };
 </script>
-
-<style>
-.signOutButton {
-    margin-top: 10px;
-    margin-right: 10px;
-    font-size: 20px;
-}
-</style>

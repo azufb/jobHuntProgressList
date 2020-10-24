@@ -10,22 +10,3 @@ export default {
     name: 'home',
 }
 </script>
-
-<style>
-h1 {
-    margin-top: 10px;
-    font-size: 50px;
-}
-
-@media(max-width: 767px) {
-  h1 {
-    font-size: 30px;
-  }
-}
-
-@media(max-width: 653px) {
-  h1 {
-    font-size: 30px;
-  }
-}
-</style>
