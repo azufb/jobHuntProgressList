@@ -2,7 +2,7 @@
   <div id='app'>
     <div id='nav'>
       <router-link to='/' class='top'>
-        <h2 class='mainTitle'>Job Hunting Progress Manage</h2>
+        <h2>Job Hunting Progress Manage</h2>
       </router-link>
       <router-link to='/signup' class='nav'>
         <span>
@@ -34,68 +34,38 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 0px;
-}
+<style lang="scss" scoped>
+$marginTop: 30px;
+$marginLeft: 10px;
+$marginRight: 10px;
+$fontSize: 20px;
+$mainColor: #2c3e50;
 
 .top {
   text-decoration: none;
-  color: #2c3e50;
-}
-
-.mainTitle {
-  margin-bottom: 0px;
-  text-align: left;
-}
+  color: $mainColor;
+} 
 
 #nav {
   text-align: right;
-}
+}  
 
 .nav {
-  margin-right: 10px;
-  font-size: 20px;
+  margin: {
+    right: $marginRight;
+  }
+  font-size: $fontSize;
   text-decoration: none;
-  color: #2c3e50;
+  color: $mainColor;
 }
 
 .jobHuntProgress {
-  margin-right: 10px;
-  font-size: 20px;
+  margin: {
+    right: $marginRight;
+  }
+  font-size: $fontSize;
   text-decoration: none;
-  color: #2c3e50;
-}
+  color: $mainColor;
+}     
 
-@media(max-width: 767px) {
-  #nav {
-    text-align: left;
-  }
-
-  .nav {
-    font-size: 15px;
-  }
-
-  .jobHuntProgress {
-    font-size: 15px;
-  }
-}
-
-@media(max-width: 653px) {
-  .mainTitle {
-    font-size: 18px;
-  }
-  .nav {
-    font-size: 12px;
-  }
-
-  .jobHuntProgress {
-    font-size: 12px;
-  }
-}
 </style>
